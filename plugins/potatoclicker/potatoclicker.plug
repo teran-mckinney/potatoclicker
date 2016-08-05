@@ -1,0 +1,9 @@
+[Core]
+Name = potatoclicker
+Module = potatoclicker
+
+[Documentation]
+Description = Make potatoes.
+
+[Python]
+Version = 2+
