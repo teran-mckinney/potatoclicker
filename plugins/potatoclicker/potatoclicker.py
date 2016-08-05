@@ -16,9 +16,12 @@ def _giphy(gif):
     """
     gifs = json.load(urlopen('http://api.giphy.com/'
                              'v1/gifs/search?q={}'
-                             '&api_key=dc6zaTOxFJmzC'.format(gif)))
+                             '&api_key=dc6zaTOxFJmzC'
+                             '&limit=100'.format(gif)))
     random_gif = random.randint(0, len(gifs))
-    return gifs['data'][random_gif]['images']['fixed_width']['url']
+    random_decacher = str(random.randint(0, 1000))
+    gif_url = gifs['data'][random_gif]['images']['fixed_width']['url']
+    return gif_url + '?' + random_decacher
 
 
 class potatoclicker(BotPlugin):
