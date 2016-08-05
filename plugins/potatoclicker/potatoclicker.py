@@ -11,6 +11,8 @@ import json
 def _giphy(gif):
     """
     Returns a gif for 'gif'
+
+    Uses "production beta" API key for Giphy.
     """
     gifs = json.load(urlopen('http://api.giphy.com/'
                              'v1/gifs/search?q={}'
@@ -63,7 +65,7 @@ class potatoclicker(BotPlugin):
                     'potatoes! {}'.format(risky_potatoes * -1,
                                           _giphy('fail'))
             else:
-                return '{} is boring! They gain or lose no ' + \
+                return '{} is boring! They gain or lose no ' \
                   'potatoes!'.format(user)
 
     @botcmd
