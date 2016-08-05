@@ -54,7 +54,7 @@ class potatoclicker(BotPlugin):
             return 'You haven\'t even used !potato before! You ' \
                 'go negative 10 potatoes! {}'.format(_giphy('epicfail'))
         else:
-            risky_potatoes = random.randint(-2000, 1000)
+            risky_potatoes = random.randint(-1000, 1000)
             self[user] = self[user] + risky_potatoes
             if risky_potatoes > 0:
                 return 'You take a huge risk and it pays off! {} more ' \
